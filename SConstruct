@@ -1,0 +1,6 @@
+env = Environment()
+env.Append(CPPPATH = ['/boost_1_50_0/','/boost_1_50_0/stage/lib/','/usr/local/lib/'])
+env.Append(LIBS = ['rt','pthread','boost_system','boost_thread'])
+env.Append(LIBPATH = ['/usr/local/lib/','/boost_1_50_0/stage/lib/'])
+env.Append(CPPFLAGS = '-g -std=c++0x -lrt -L/usr/local/lib -lboost_thread -lboost_system -lboost_chrono ')
+env.Program('cli',['cli.cpp','FIX_Interface.cpp','Order.cpp','AsyncLogger.cpp','split.cpp','TradeStateEnvelope.cpp','TradeState.cpp','SnapshotLogfile.cpp','util.cpp'])
